@@ -76,3 +76,26 @@ While the model may perform well on styles similar to those in the training set,
    - Execute the code to set up a TensorFlow dataset loader using the specified parameters.
    - The `TensorflowDatasetLoader` class should be defined somewhere in your code or imported from a module.
    - The code prints the element spec of the training and testing datasets, providing insights into the structure of the data.
+
+# References
+
+## Fast Style Transfer: Training a Feedforward Network for Artistic Style
+
+### Training Insights
+
+- **Feedforward Network:**
+  We use a residual autoencoder network, the same one employed in the original implementation. This network takes a content image as input and produces a stylized image.
+
+- **Loss Function:**
+  The loss function, as defined in the Gatys et al. paper, remains crucial. It comprises both style and content loss.
+
+- **Normalization Technique:**
+  Instead of batch normalization, we opt for instance normalization, following the findings of the paper titled [Instance Normalization: The Missing Ingredient for Fast Stylization](https://arxiv.org/abs/1607.08022). This choice often yields superior results.
+
+- **Perceptual Loss:**
+  VGG19 comes into play for calculating perceptual loss, a critical aspect discussed in the original paper. This loss is instrumental in ensuring that the generated images capture the style essence effectively.
+
+### Citations
+
+- Gatys, L. A., Ecker, A. S., & Bethge, M. (2016). A Neural Algorithm of Artistic Style. arXiv preprint arXiv:1508.06576.
+- Ulyanov, D., Vedaldi, A., & Lempitsky, V. (2016). Instance Normalization: The Missing Ingredient for Fast Stylization. arXiv preprint arXiv:1607.08022.
