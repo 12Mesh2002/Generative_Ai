@@ -55,13 +55,8 @@ While the model may perform well on styles similar to those in the training set,
 ## Getting Started
 
 1. **Download the Kaggle Dataset:**
-   - Install the Kaggle API by running `pip install kaggle`.
-   - Obtain your Kaggle API key from your Kaggle account (Account > Create New API Token). Upload the `kaggle.json` file to your Colab or Kaggle Notebook environment.
-   - Download the dataset using the following command:
-     ```bash
-     !kaggle datasets download -d landscape-pictures
-     ```
-   - Extract the downloaded zip file.
+   - You can just go to this url and download the dataset manually from kaggle: [https://www.kaggle.com/datasets/arnaud58/landscape-pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)
+   - Extract the downloaded zip file. 
 
 2. **Update Dataset Path in Code:**
    - Open the provided code in your preferred editor.
@@ -87,7 +82,7 @@ While the model may perform well on styles similar to those in the training set,
   We use a residual autoencoder network, the same one employed in the original implementation. This network takes a content image as input and produces a stylized image.
 
 - **Loss Function:**
-  The loss function, as defined in the Gatys et al. paper, remains crucial. It comprises both style and content loss.
+  The loss function, as defined in the [Gatys et al. paper](https://arxiv.org/pdf/1508.06576.pdf), remains crucial. It comprises both style and content loss.
 
 - **Normalization Technique:**
   Instead of batch normalization, we opt for instance normalization, following the findings of the paper titled [Instance Normalization: The Missing Ingredient for Fast Stylization](https://arxiv.org/abs/1607.08022). This choice often yields superior results.
