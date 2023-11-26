@@ -54,8 +54,25 @@ While the model may perform well on styles similar to those in the training set,
 
 ## Getting Started
 
-...
+1. **Download the Kaggle Dataset:**
+   - Install the Kaggle API by running `pip install kaggle`.
+   - Obtain your Kaggle API key from your Kaggle account (Account > Create New API Token). Upload the `kaggle.json` file to your Colab or Kaggle Notebook environment.
+   - Download the dataset using the following command:
+     ```bash
+     !kaggle datasets download -d landscape-pictures
+     ```
+   - Extract the downloaded zip file.
 
-## Usage
+2. **Update Dataset Path in Code:**
+   - Open the provided code in your preferred editor.
+   - Update the `dataset_path` variable to point to the correct location where the dataset is stored on your system.
+     ```python
+     dataset_path = "/path/to/your/dataset"
+     ```
+3. **Download Pre-trained Model
+   -To use the pre-trained weights for testing,Save the downloaded model checkpoint file ('model_checkpoint.ckpt') to your local machine.
 
-...
+5. **Run the Code:**
+   - Execute the code to set up a TensorFlow dataset loader using the specified parameters.
+   - The `TensorflowDatasetLoader` class should be defined somewhere in your code or imported from a module.
+   - The code prints the element spec of the training and testing datasets, providing insights into the structure of the data.
