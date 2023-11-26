@@ -5,16 +5,6 @@
 This repository implements fast style transfer using a residual autoencoder network, instance normalization, and VGG19 for perceptual loss. The network takes a content image as input and produces a stylized image.
 
 
-## Texture Networks + Instance Normalization: Feed-forward Synthesis of Textures and Stylized Images
-
-The **Texture Networks** model, as introduced in the paper *"Texture Networks: Feed-forward Synthesis of Textures and Stylized Images,"* provides a faster approach to texture generation and image stylization. The key innovation involves training a feedforward generator using a loss function proposed by Gatys et al. Once the model is trained, it enables the instantaneous generation of texture samples or stylized images of varying sizes.
-
-The subsequent advancement in this line of research is presented in *"Improved Texture Networks: Maximizing Quality and Diversity in Feed-forward Stylization and Texture Synthesis."* This iteration focuses on enhancing the architectural design of the generator network. Notably, the transition from batch normalization to Instance Normalization is highlighted as a pivotal improvement. This alteration streamlines the learning process, leading to a significant enhancement in output quality.
-
-Furthermore, the model's stylization component draws inspiration from *"Perceptual Losses for Real-Time Style Transfer and Super-Resolution,"* further enriching its capabilities.
-
-For those interested, an online demo showcasing the capabilities of this model is available [here](insert_link_here) (with thanks to RiseML).
-
 ## Training Insights
 
 - **Feedforward Network:**
@@ -28,6 +18,15 @@ For those interested, an online demo showcasing the capabilities of this model i
 
 - **Perceptual Loss:**
   VGG19 comes into play for calculating perceptual loss, a critical aspect discussed in the original paper. This loss is instrumental in ensuring that the generated images capture the style essence effectively.
+
+
+## Texture Networks + Instance Normalization: Feed-forward Synthesis of Textures and Stylized Images
+
+The **Texture Networks** model, as introduced in the paper [*"Texture Networks: Feed-forward Synthesis of Textures and Stylized Images,"*](https://arxiv.org/abs/1603.03417) provides a faster approach to texture generation and image stylization. The key innovation involves training a feedforward generator using a loss function proposed by Gatys et al. Once the model is trained, it enables the instantaneous generation of texture samples or stylized images of varying sizes.
+
+The subsequent advancement in this line of research is presented in [*"Improved Texture Networks: Maximizing Quality and Diversity in Feed-forward Stylization and Texture Synthesis."*](https://arxiv.org/abs/1701.02096) This iteration focuses on enhancing the architectural design of the generator network. Notably, the transition from batch normalization to Instance Normalization is highlighted as a pivotal improvement. This alteration streamlines the learning process, leading to a significant enhancement in output quality.
+
+Furthermore, the model's stylization component draws inspiration from [*"Perceptual Losses for Real-Time Style Transfer and Super-Resolution,"*](https://arxiv.org/abs/1603.08155) further enriching its capabilities.
 
 ## Getting Started
 
